@@ -1,14 +1,14 @@
-import { use, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function App() {
   // const element  = document.querySelector('h1');
   // console.log('element');
   // const ref = useRef(null);
 
-  const btnsRef = useRef(null);
-  if(!btnsRef.current){
-    btnsRef.current = [];
-  }
+  // const btnsRef = useRef(null);
+  // if(!btnsRef.current){
+  //   btnsRef.current = [];
+  // }
 
   // if(ref.current){
   //   const h1  = ref.current;
@@ -35,7 +35,7 @@ const [isFocused, setIsFocused] = useState(false);
     <div className="container">
      {/* <h1 ref={ref} className="text-center">Ilgizbek</h1> */}
 
-     <div className="flex gap-3">
+     {/* <div className="flex gap-3">
       <button
         ref={(el) => (btnsRef.current[0] = el)}
         className="px-4 py-2 bg-blue-500 text-white"
@@ -56,7 +56,7 @@ const [isFocused, setIsFocused] = useState(false);
       >
         Button 3
       </button>
-    </div>
+    </div> */}
 
     <form ref={ref} className={`border rounded-sm flex items-center ${isFocused ? 'border-lime-400 border-2' : 'border'}`}>
       <input value={value} onFocus={()=>setIsFocused(true)} onBlur={()=>setIsFocused(false)} onChange={(e)=>setValue(e.target.value)} type="text" placeholder="Enter your name" className="grow outline-none"/>
