@@ -58,7 +58,7 @@ const [isFocused, setIsFocused] = useState(false);
       </button>
     </div> */}
 
-    <form ref={ref} className={`border rounded-sm flex items-center ${isFocused ? 'border-lime-400 border-2' : 'border'}`}>
+    <form className={`border rounded-sm flex items-center ${isFocused ? 'border-lime-400 border-2' : 'border'}`}>
       <input value={value} onFocus={()=>setIsFocused(true)} onBlur={()=>setIsFocused(false)} onChange={(e)=>setValue(e.target.value)} type="text" placeholder="Enter your name" className="grow outline-none"/>
       <button type="submit">Submit</button>
     </form>
